@@ -19,7 +19,7 @@ const imageVariants = {
 
 const Contact = () => {
   return (
-    <div className="h-screen flex justify-center flex-col">
+    <div className="h-screen flex flex-col justify-center">
       <motion.div
         className="flex flex-col items-center justify-center"
         initial="hidden"
