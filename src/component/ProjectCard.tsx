@@ -12,20 +12,17 @@ const ProjectCard = ({
 }: projectCartType) => {
   return (
     <div
-      className={`flex ${
+      className={`relative flex ${
         reverse && "flex-row-reverse"
-      } gap-4 bg-neutral-content p-4 rounded-box`}
+      } gap-4 bg-neutral-content p-4 rounded-box group`}
     >
-      <img
-        className="w-[400px] rounded-box object-cover"
-        src={image}
-        alt="image card"
-      />
-      <div className="p-10 grid gap-4">
-        <h3 className="text-4xl font-semibold">{title}</h3>
-        <p className="text-neutral-400 leading-7">{description}</p>
+      <img className="object-cover rounded-box" src={image} alt="image card" />
+
+      <div className="absolute grid place-items-center w-full h-full left-0 top-0 p-10 bg-neutral-800 opacity-0 invisible transition-opacity duration-300 group-hover:opacity-90 group-hover:visible gap-4 rounded-box">
+        <h3 className="text-4xl font-semibold text-white">{title}</h3>
+        <p className="leading-8 text-white text-center">{description}</p>
         <div className="flex justify-center">
-          <button className="btn btn-neutral btn-outline btn-wide rounded-full">
+          <button className="btn btn-warning btn-outline btn-wide rounded-full">
             View Project
           </button>
         </div>
