@@ -22,13 +22,13 @@ const ToggleDarkMode = () => {
     }
   };
   return (
-    <div className="absolute top-5 right-16">
+    <div>
       {currentTheme === "retro" ? (
-        <button onClick={handleChangeMode}>
+        <button className="btn" onClick={handleChangeMode}>
           <IoSunny className="text-3xl" />
         </button>
       ) : (
-        <button onClick={handleChangeMode}>
+        <button className="btn" onClick={handleChangeMode}>
           <MdDarkMode className="text-3xl" />
         </button>
       )}

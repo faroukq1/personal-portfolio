@@ -74,13 +74,17 @@ const Contact = () => {
             variants={itemVariants}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <button className="btn btn-warning text-white mt-5">Send</button>
+            <motion.div className="grid place-items-center">
+              <button className="btn btn-warning btn-wide text-white mt-5">
+                Send
+              </button>
+            </motion.div>
           </motion.div>
         </motion.div>
         <motion.img
           src={email}
           alt="contact picture"
-          className="w-1/3 object-cover"
+          className="w-1/3 object-cover hidden lg:block"
           variants={imageVariants}
           initial="hidden"
           animate="visible"

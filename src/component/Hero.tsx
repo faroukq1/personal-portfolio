@@ -17,7 +17,7 @@ const imageVariants = {
 const Hero = () => {
   return (
     <section className="container h-screen flex items-center justify-between gap-8">
-      <div>
+      <div className="grid place-items-center w-full">
         <motion.div
           className="grid gap-2"
           initial="hidden"
@@ -80,7 +80,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <div className="relative">
+      <div className="relative hidden lg:block">
         <motion.div
           className="blob"
           initial="hidden"
