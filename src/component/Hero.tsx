@@ -1,3 +1,4 @@
+// Hero.js
 import { motion } from "framer-motion";
 import reclangle from "../assets/Rectangle 17.png";
 import sqare from "../assets/square.png";
@@ -31,8 +32,14 @@ const Hero = () => {
             Hello, I'm Farouk,
           </motion.h3>
 
-          <motion.h1 className="text-5xl font-bold whitespace-nowrap overflow-hidden relative">
-            Front End Developer
+          <motion.h1
+            className="text-5xl font-bold whitespace-nowrap overflow-hidden relative"
+            initial="hidden"
+            animate="visible"
+            variants={sectionVariants}
+            transition={{ duration: 1, delay: 0.2 }}
+          >
+            <span className="animate-typing">Front End Developer</span>
             <span
               className="absolute border-r-4 border-white animate-blink"
               style={{ left: "105%" }}
