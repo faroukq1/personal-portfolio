@@ -43,7 +43,9 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex items-center gap-4">
-          <ToggleDarkMode />
+          <div className="xl:hidden">
+            <ToggleDarkMode />
+          </div>
           <div className="xl:hidden gap-4 dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn m-1">
               <GiHamburgerMenu />
