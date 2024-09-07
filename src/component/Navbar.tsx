@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ToggleDarkMode from "./ToggleDarkMode";
 import { Link } from "react-scroll";
 type navDataType = {
@@ -20,12 +19,6 @@ const navData: navDataType[] = [
   },
 ];
 const Navbar = () => {
-  const [selectedSection, setSelectedSection] = useState<string>(
-    navData[0].name
-  );
-  const changeSection = (newSection: string) => {
-    setSelectedSection(newSection);
-  };
   return (
     <nav className="fixed z-10 w-full py-2 shadow-sm bg-base-300">
       <ToggleDarkMode />
@@ -36,18 +29,8 @@ const Navbar = () => {
             {navData.map((item: navDataType) => {
               const { id, name } = item;
               return (
-                <li
-                  key={id}
-                  className={`${
-                    selectedSection === name && "border-b border-neutral"
-                  }`}
-                >
-                  <Link
-                    to={name}
-                    duration={500}
-                    onClick={() => changeSection(name)}
-                    className="btn btn-ghost"
-                  >
+                <li key={id} className="btn btn-ghost">
+                  <Link to={name} duration={500}>
                     <p className="text-lg">{name}</p>
                   </Link>
                 </li>

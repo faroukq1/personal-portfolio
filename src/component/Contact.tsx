@@ -21,7 +21,7 @@ const Contact = () => {
   return (
     <>
       <motion.div
-        className="mt-20 flex flex-col justify-center items-center"
+        className="flex flex-col items-center"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
