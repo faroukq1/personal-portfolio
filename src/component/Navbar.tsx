@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { TooggleDarkMode } from ".";
 import ToggleDarkMode from "./ToggleDarkMode";
 
 type navDataType = {
