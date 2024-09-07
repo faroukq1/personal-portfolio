@@ -1,23 +1,6 @@
 import reclangle from "../assets/Rectangle 17.png";
 import sqare from "../assets/square.png";
-import { AiFillInstagram } from "react-icons/ai";
-import { FaLinkedin } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-
-const socialMediaData = [
-  {
-    id: 1,
-    icon: <AiFillInstagram />,
-  },
-  {
-    id: 2,
-    icon: <FaLinkedin />,
-  },
-  {
-    id: 3,
-    icon: <MdEmail />,
-  },
-];
+import { skillsData, socialMediaData } from "../DATA";
 
 const Hero = () => {
   return (
@@ -27,8 +10,17 @@ const Hero = () => {
           <h3 className="font-semibold text-2xl">Hello, I'm farouk,</h3>
           <h1 className="text-6xl font-bold">Front End Developer</h1>
           <h3 className="font-semibold text-2xl">based in algeria</h3>
+          <div className="flex gap-4">
+            {skillsData.map((icon, index) => {
+              return (
+                <span className="text-2xl my-2" key={index}>
+                  {icon}
+                </span>
+              );
+            })}
+          </div>
         </div>
-        <button className="btn btn-warning mt-8">Resume</button>
+        <button className="btn btn-warning mt-4">Resume</button>
       </div>
       <div className="relative">
         <div className="blob"></div>
