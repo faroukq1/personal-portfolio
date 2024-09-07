@@ -19,9 +19,9 @@ const imageVariants = {
 
 const Contact = () => {
   return (
-    <>
+    <div className="h-screen flex flex-col justify-center">
       <motion.div
-        className="flex flex-col items-center"
+        className="flex flex-col items-center justify-center"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -80,14 +80,14 @@ const Contact = () => {
         <motion.img
           src={email}
           alt="contact picture"
-          className="object-cover"
+          className="w-1/3 object-cover"
           variants={imageVariants}
           initial="hidden"
           animate="visible"
           transition={{ duration: 1, delay: 0.8 }}
         />
       </section>
-    </>
+    </div>
   );
 };
 
