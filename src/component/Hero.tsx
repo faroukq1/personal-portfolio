@@ -1,7 +1,5 @@
-import heroimage from "../assets/heropic.png";
 import reclangle from "../assets/Rectangle 17.png";
 import sqare from "../assets/square.png";
-import vector from "../assets/Vector.png";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -20,6 +18,7 @@ const socialMediaData = [
     icon: <MdEmail />,
   },
 ];
+
 const Hero = () => {
   return (
     <section className="container h-screen flex items-center justify-between gap-8">
@@ -32,14 +31,13 @@ const Hero = () => {
         <button className="btn btn-warning mt-8">Resume</button>
       </div>
       <div className="relative">
-        <img src={vector} alt="vector" className="absolute" />
-        <img src={heroimage} alt="hero" className="rounded-full" />
-        <div className="flex absolute bottom-20 left-15">
+        <div className="blob"></div>
+        <div className="flex absolute bottom-24 left-15">
           {Array.from({ length: 5 }).map((_, index) => {
             return <img key={index} src={reclangle} alt="rectangle" />;
           })}
         </div>
-        <div className="flex w-fit absolute top-0 right-0">
+        <div className="flex w-fit absolute top-10 right-10">
           <div className="flex flex-col gap-2">
             {Array.from({ length: 2 }).map((_, index) => {
               return (
