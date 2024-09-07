@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,7 +8,9 @@
     @apply mx-auto max-w-6xl px-8;
   }
 }
-
+body {
+  font-family: "Montserrat", sans-serif;
+}
 .blob {
   background-image: url("./assets/heropic.png");
   width: 450px;
