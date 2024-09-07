@@ -26,30 +26,32 @@ const Navbar = () => {
     setSelectedSection(newSection);
   };
   return (
-    <nav className="w-full flex justify-between items-center p-4">
-      <h1 className="text-xl tracking-widest font-bold btn btn-neutral">
-        Farouk
-      </h1>
-      <ul className="flex gap-8">
-        {navData.map((item: navDataType) => {
-          const { id, name } = item;
-          return (
-            <li
-              key={id}
-              className={`${
-                selectedSection === name && "border-b border-neutral"
-              }`}
-            >
-              <button
-                onClick={() => changeSection(name)}
-                className="btn btn-ghost"
+    <nav className="fixed w-full top-0 flex items-center justify-center p-4">
+      <div className="w-full max-w-7xl flex items-center justify-between">
+        <h1 className="text-xl tracking-widest font-bold btn btn-neutral">
+          Farouk
+        </h1>
+        <ul className="flex gap-8">
+          {navData.map((item: navDataType) => {
+            const { id, name } = item;
+            return (
+              <li
+                key={id}
+                className={`${
+                  selectedSection === name && "border-b border-neutral"
+                }`}
               >
-                <p className="text-xl">{name}</p>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
+                <button
+                  onClick={() => changeSection(name)}
+                  className="btn btn-ghost"
+                >
+                  <p className="text-xl">{name}</p>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </nav>
   );
 };

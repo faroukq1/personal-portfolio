@@ -4,7 +4,7 @@ import sqare from "../assets/square.png";
 import vector from "../assets/Vector.png";
 const Hero = () => {
   return (
-    <div className="min-h-screen flex items-center justify-between gap-8">
+    <div className="container min-h-screen flex items-center justify-between gap-8">
       <div>
         <div className="grid gap-2">
           <h3 className="font-semibold text-2xl">Hello, I'm farouk,</h3>
