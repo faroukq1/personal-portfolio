@@ -1,69 +1,165 @@
-// Hero.js
+import { motion } from "framer-motion";
 import reclangle from "../assets/Rectangle 17.png";
 import sqare from "../assets/square.png";
 import { skillsData, socialMediaData } from "../DATA";
+
+const sectionVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const imageVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 const Hero = () => {
   return (
     <section className="container h-screen flex items-center justify-between gap-8">
       <div>
-        <div className="grid gap-2">
-          <h3 className="font-semibold text-2xl">Hello, I'm Farouk,</h3>
-          <h1 className="text-5xl font-bold whitespace-nowrap overflow-hidden relative animate-typing">
+        <motion.div
+          className="grid gap-2"
+          initial="hidden"
+          animate="visible"
+          variants={sectionVariants}
+          transition={{ duration: 1 }}
+        >
+          <motion.h3
+            className="font-semibold text-2xl"
+            transition={{ duration: 1 }}
+          >
+            Hello, I'm Farouk,
+          </motion.h3>
+
+          <motion.h1 className="text-5xl font-bold whitespace-nowrap overflow-hidden relative">
             Front End Developer
             <span
               className="absolute border-r-4 border-white animate-blink"
               style={{ left: "105%" }}
             ></span>
-          </h1>
-          <h3 className="font-semibold text-2xl">based in Algeria</h3>
+          </motion.h1>
+
+          <motion.h3
+            className="font-semibold text-2xl"
+            transition={{ duration: 1.2 }}
+          >
+            based in Algeria
+          </motion.h3>
+
           <div className="flex gap-4">
             {skillsData.map((icon, index) => (
-              <span className="text-2xl my-2" key={index}>
+              <motion.span
+                className="text-2xl my-2"
+                key={index}
+                initial="hidden"
+                animate="visible"
+                variants={imageVariants}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+              >
                 {icon}
-              </span>
+              </motion.span>
             ))}
           </div>
-        </div>
-        <button className="btn btn-warning mt-4">Resume</button>
+
+          <motion.button
+            className="btn btn-warning mt-4"
+            initial="hidden"
+            animate="visible"
+            variants={sectionVariants}
+            transition={{ duration: 0.5 }}
+          >
+            Resume
+          </motion.button>
+        </motion.div>
       </div>
+
       <div className="relative">
-        <div className="blob"></div>
+        <motion.div
+          className="blob"
+          initial="hidden"
+          animate="visible"
+          variants={sectionVariants}
+          transition={{ duration: 1, delay: 0.5 }}
+        />
+
         <div className="flex absolute bottom-24 left-15">
           {Array.from({ length: 5 }).map((_, index) => (
-            <img key={index} src={reclangle} alt="rectangle" />
+            <motion.img
+              key={index}
+              src={reclangle}
+              alt="rectangle"
+              initial="hidden"
+              animate="visible"
+              variants={imageVariants}
+              transition={{ duration: 1, delay: index * 0.2 }}
+            />
           ))}
         </div>
+
         <div className="flex w-fit absolute top-10 right-10">
           <div className="flex flex-col gap-2">
             {Array.from({ length: 2 }).map((_, index) => (
-              <img
+              <motion.img
                 key={index}
                 src={sqare}
                 alt="square"
                 className="w-5 h-5 object-cover"
+                initial="hidden"
+                animate="visible"
+                variants={imageVariants}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
               />
             ))}
           </div>
+
           <div className="mt-3 ml-2">
-            <img src={sqare} alt="square" className="w-5 h-5 object-cover" />
+            <motion.img
+              src={sqare}
+              alt="square"
+              className="w-5 h-5 object-cover"
+              initial="hidden"
+              animate="visible"
+              variants={imageVariants}
+              transition={{ duration: 0.5 }}
+            />
           </div>
         </div>
       </div>
+
       <div className="my-4 absolute bottom-0 left-1/2 transform -translate-x-1/2">
-        <ul className="flex gap-4 my-4">
+        <motion.ul
+          className="flex gap-4 my-4"
+          initial="hidden"
+          animate="visible"
+          variants={sectionVariants}
+          transition={{ duration: 1 }}
+        >
           {socialMediaData.map((item) => {
             const { id, icon } = item;
             return (
-              <span className="text-4xl" key={id}>
+              <motion.span
+                className="text-4xl"
+                key={id}
+                initial="hidden"
+                animate="visible"
+                variants={imageVariants}
+                transition={{ duration: 0.5 }}
+              >
                 {icon}
-              </span>
+              </motion.span>
             );
           })}
-        </ul>
-        <p className="my-4 text-sm text-neutral-400 flex flex-col items-center">
+        </motion.ul>
+
+        <motion.p
+          className="my-4 text-sm text-neutral-400 flex flex-col items-center"
+          initial="hidden"
+          animate="visible"
+          variants={sectionVariants}
+          transition={{ duration: 1 }}
+        >
           Farouk Ouledmeriem <span>{new Date().getFullYear()}</span>
-        </p>
+        </motion.p>
       </div>
     </section>
   );

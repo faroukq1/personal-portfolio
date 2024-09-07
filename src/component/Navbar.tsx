@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ToggleDarkMode from "./ToggleDarkMode";
-
+import { Link } from "react-scroll";
 type navDataType = {
   id: number;
   name: string;
@@ -12,7 +12,7 @@ const navData: navDataType[] = [
   },
   {
     id: 2,
-    name: "projets",
+    name: "projects",
   },
   {
     id: 3,
@@ -42,12 +42,14 @@ const Navbar = () => {
                     selectedSection === name && "border-b border-neutral"
                   }`}
                 >
-                  <button
+                  <Link
+                    to={name}
+                    duration={500}
                     onClick={() => changeSection(name)}
                     className="btn btn-ghost"
                   >
                     <p className="text-lg">{name}</p>
-                  </button>
+                  </Link>
                 </li>
               );
             })}
