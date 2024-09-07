@@ -1,7 +1,9 @@
+import { Hero, Navbar } from "./component";
 const App = () => {
   return (
-    <main className="h-screen bg-neutral-700">
-      <h1>hello world</h1>
+    <main className="container">
+      <Navbar />
+      <Hero />
     </main>
   );
 };
