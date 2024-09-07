@@ -1,4 +1,3 @@
-// Hero.js
 import { motion } from "framer-motion";
 import reclangle from "../assets/Rectangle 17.png";
 import sqare from "../assets/square.png";
