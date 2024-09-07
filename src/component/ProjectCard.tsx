@@ -4,17 +4,10 @@ type projectCartType = {
   image: string;
   reverse?: boolean;
 };
-const ProjectCard = ({
-  title,
-  description,
-  image,
-  reverse,
-}: projectCartType) => {
+const ProjectCard = ({ title, description, image }: projectCartType) => {
   return (
     <div
-      className={`relative flex ${
-        reverse && "flex-row-reverse"
-      } gap-4 bg-neutral-content p-4 rounded-lg group`}
+      className={`w-2/5 relative flex gap-4 bg-neutral-content p-4 rounded-lg group`}
     >
       <img className="object-cover rounded-lg" src={image} alt="image card" />
 
@@ -22,7 +15,7 @@ const ProjectCard = ({
         <h3 className="text-4xl font-semibold text-white">{title}</h3>
         <p className="leading-8 text-white text-center">{description}</p>
         <div className="flex justify-center">
-          <button className="btn btn-warning btn-outline btn-wide rounded-full">
+          <button className="btn btn-warning btn-outline rounded-full">
             View Project
           </button>
         </div>

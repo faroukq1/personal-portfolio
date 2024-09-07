@@ -9,9 +9,7 @@ const Projets = () => {
       </div>
       <div className="flex justify-center gap-4 mt-8">
         {projectData.map((item, index) => {
-          return (
-            <ProjectCard {...item} key={item.id} reverse={index % 2 == 0} />
-          );
+          return <ProjectCard {...item} key={item.id} />;
         })}
       </div>
     </section>
