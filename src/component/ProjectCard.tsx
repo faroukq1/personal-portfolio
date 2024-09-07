@@ -14,11 +14,11 @@ const ProjectCard = ({
     <div
       className={`relative flex ${
         reverse && "flex-row-reverse"
-      } gap-4 bg-neutral-content p-4 rounded-box group`}
+      } gap-4 bg-neutral-content p-4 rounded-lg group`}
     >
-      <img className="object-cover rounded-box" src={image} alt="image card" />
+      <img className="object-cover rounded-lg" src={image} alt="image card" />
 
-      <div className="absolute grid place-items-center w-full h-full left-0 top-0 p-10 bg-neutral-800 opacity-0 invisible transition-opacity duration-300 group-hover:opacity-90 group-hover:visible gap-4 rounded-box">
+      <div className="absolute grid place-items-center w-full h-full left-0 top-0 p-10 bg-neutral-800 opacity-0 invisible transition-opacity duration-300 group-hover:opacity-90 group-hover:visible gap-4 rounded-lg">
         <h3 className="text-4xl font-semibold text-white">{title}</h3>
         <p className="leading-8 text-white text-center">{description}</p>
         <div className="flex justify-center">
