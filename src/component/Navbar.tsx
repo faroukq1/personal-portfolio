@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { TooggleDarkMode } from ".";
+import ToggleDarkMode from "./ToggleDarkMode";
 
 type navDataType = {
   id: number;
@@ -27,7 +29,8 @@ const Navbar = () => {
   };
   return (
     <nav className="fixed z-10 w-full py-2 shadow-sm bg-base-300">
-      <div className="container">
+      <ToggleDarkMode />
+      <div className="relative container">
         <div className="w-full max-w-7xl flex items-center justify-between">
           <h1 className="text-xl tracking-widest font-bold">Farouk</h1>
           <ul className="flex gap-8">
