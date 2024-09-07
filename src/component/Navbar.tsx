@@ -26,7 +26,7 @@ const Navbar = () => {
     setSelectedSection(newSection);
   };
   return (
-    <nav className="fixed w-full top-0 flex items-center justify-center p-4">
+    <nav className="container flex items-center justify-center py-4">
       <div className="w-full max-w-7xl flex items-center justify-between">
         <h1 className="text-xl tracking-widest font-bold btn btn-neutral">
           Farouk
