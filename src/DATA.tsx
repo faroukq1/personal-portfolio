@@ -8,8 +8,6 @@ import { FaJs } from "react-icons/fa6";
 import { SiTypescript } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { SiSass } from "react-icons/si";
-import project1 from "./assets/projectsimages/project1.png";
-import project2 from "./assets/projectsimages/project2.png";
 export const socialMediaData = [
   {
     id: 1,
@@ -33,38 +31,4 @@ export const skillsData = [
   <SiTypescript />,
   <FaReact />,
   <SiSass />,
-];
-
-export const projectData = [
-  {
-    id: 1,
-    title: "Just Home",
-    description:
-      "Discover your dream property today! Our platform connects buyers and sellers with a variety of homes, apartments, and commercial properties to suit any need. Browse detailed listings featuring high-quality photos and virtual tours, making it easy to find your perfect match. Sellers can list their properties to reach a large audience, while buyers receive personalized support to navigate the process.",
-    image: project2,
-    link: "https://66db3432d116e506991ff3ca--justhome.netlify.app/",
-    pictures: [
-      "https://drive.usercontent.google.com/download?id=1LKSYNiAPsu7DiQ0S40UmJhr5w1EtZtkT&export=view&authuser=0",
-      "https://drive.usercontent.google.com/download?id=1slUiSZ7l2EvjpPWB4I7KS3MeSBIWDclj&export=view&authuser=0",
-      "https://drive.usercontent.google.com/download?id=1CAbRGjWFr8zMc45fy9Dhe0I-irsZuYwW&export=view&authuser=0",
-      "https://drive.usercontent.google.com/download?id=1C0KsoSeDIDaRpi3dg6GlLJPGX1fDGvUn&export=view&authuser=0",
-      "https://drive.usercontent.google.com/download?id=1bv89-nuIorFVe0vUpXki3hkN3GgQBXik&export=view&authuser=0",
-      "https://drive.usercontent.google.com/download?id=1kcyieIgLHZgd_bg88MJHUS0SaIU0Lot7&export=view&authuser=0",
-      "https://drive.usercontent.google.com/download?id=1wF8zxX4fqABsWB24FrJRtrIV9R6W2t_w&export=view&authuser=0",
-      "https://drive.usercontent.google.com/download?id=1lpkFa65bt7lokOodoiEJUupNTdMxoE_f&export=view&authuser=0",
-    ],
-  },
-  {
-    id: 0,
-    title: "Camping Store",
-    description:
-      "Gear up for your next outdoor adventure with our top-quality camping equipment! We offer a wide selection of durable tents, cozy sleeping bags, portable stoves, and all the essentials to make your camping experience unforgettable. From backpacks and cookware to lanterns and survival tools, our store is your one-stop-shop for everything outdoors. Whether you're a seasoned adventurer or new to camping, our reliable.",
-    image: project1,
-    link: "https://faroukq1.github.io/comfy-store/",
-    pictures: [
-      "https://drive.usercontent.google.com/download?id=1AKqWJZt1OwfI9ZfDFxTJFCZdbOISOxLD&export=view&authuser=0",
-      "https://drive.google.com/file/d/1QKowNoEIV9pOlDmYpWXsqTUpZCnJCtd3/view?usp=drive_link",
-      "https://drive.google.com/file/d/1DeSXyLoq7hXN4yCZLQ3FOIPeN5atbAA6/view?usp=drive_link",
-    ],
-  },
 ];

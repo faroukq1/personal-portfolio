@@ -1,6 +1,6 @@
 import { IoMdCloseCircle } from "react-icons/io";
 
-const ProjectPictureModal = ({ pictures, hideModal, setHideModal }: any) => {
+const ProjectPictureModal = ({ images, hideModal, setHideModal }: any) => {
   const handleHideModal = () => {
     setHideModal(true);
   };
@@ -26,23 +26,13 @@ const ProjectPictureModal = ({ pictures, hideModal, setHideModal }: any) => {
         >
           <IoMdCloseCircle className="text-5xl pointer-events-none mr-10 text-red-500" />
         </button>
-        <div className="carousel w-full h-full rounded-box">
-          {pictures.map((item: string, index: number) => {
+        <div className="carousel carousel-center bg-neutral rounded-box w-full h-full space-x-4 p-4">
+          {images.map((item: any) => {
+            const image = `https:${item.fields.file.url}`;
+
             return (
-              <div
-                key={index}
-                id={`slid${index}`}
-                className="carousel-item relative w-full"
-              >
-                <img src={item} alt="item" />
-                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                  <a href="#slide4" className="btn btn-circle">
-                    ❮
-                  </a>
-                  <a href="#slide2" className="btn btn-circle">
-                    ❯
-                  </a>
-                </div>
+              <div key={item.sys.id} className="w-full h-full carousel-item">
+                <img src={image} className="rounded-box object-cover" />
               </div>
             );
           })}
