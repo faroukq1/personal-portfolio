@@ -1,10 +1,24 @@
+import { useState } from "react";
+import ProjectPictureModal from "./ProjectPictureModal";
+
 type projectCartType = {
   title: string;
   description: string;
   image: string;
   link: string;
+  pictures: any;
 };
-const ProjectCard = ({ title, description, image, link }: projectCartType) => {
+const ProjectCard = ({
+  title,
+  description,
+  image,
+  link,
+  pictures,
+}: projectCartType) => {
+  const [hideModal, setHideModal] = useState<boolean>(true);
+  const handleShowModal = () => {
+    setHideModal(false);
+  };
   return (
     <div
       className={`relative flex gap-4 bg-neutral-content p-4 rounded-lg group`}
@@ -19,7 +33,10 @@ const ProjectCard = ({ title, description, image, link }: projectCartType) => {
         <h3 className="text-4xl font-semibold text-white">{title}</h3>
         <p className="leading-8 text-white text-center">{description}</p>
         <div className="flex gap-4 justify-center">
-          <button className="btn btn-warning btn-outline rounded-full">
+          <button
+            onClick={handleShowModal}
+            className="btn btn-warning btn-outline rounded-full"
+          >
             View Picture
           </button>
           <a
@@ -31,6 +48,11 @@ const ProjectCard = ({ title, description, image, link }: projectCartType) => {
           </a>
         </div>
       </div>
+      <ProjectPictureModal
+        pictures={pictures}
+        hideModal={hideModal}
+        setHideModal={setHideModal}
+      />
     </div>
   );
 };

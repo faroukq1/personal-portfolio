@@ -1,6 +1,5 @@
 import ProjectCard from "./ProjectCard";
 import { projectData } from "../DATA";
-import ProjectPictureModal from "./ProjectPictureModal";
 const Projets = () => {
   return (
     <section className="h-screen p-5 flex flex-col justify-center items-center gap-20 mb-20">
@@ -13,7 +12,6 @@ const Projets = () => {
           return <ProjectCard {...item} key={item.id} />;
         })}
       </div>
-      <ProjectPictureModal />
     </section>
   );
 };
