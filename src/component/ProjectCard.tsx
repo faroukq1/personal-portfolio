@@ -2,9 +2,9 @@ type projectCartType = {
   title: string;
   description: string;
   image: string;
-  reverse?: boolean;
+  link: string;
 };
-const ProjectCard = ({ title, description, image }: projectCartType) => {
+const ProjectCard = ({ title, description, image, link }: projectCartType) => {
   return (
     <div
       className={`relative flex gap-4 bg-neutral-content p-4 rounded-lg group`}
@@ -18,10 +18,17 @@ const ProjectCard = ({ title, description, image }: projectCartType) => {
       <div className="absolute grid place-items-center w-full h-full left-0 top-0 p-10 bg-neutral-800 opacity-0 invisible transition-opacity duration-300 group-hover:opacity-90 group-hover:visible gap-4 rounded-lg">
         <h3 className="text-4xl font-semibold text-white">{title}</h3>
         <p className="leading-8 text-white text-center">{description}</p>
-        <div className="flex justify-center">
+        <div className="flex gap-4 justify-center">
           <button className="btn btn-warning btn-outline rounded-full">
-            View Project
+            View Picture
           </button>
+          <a
+            target="_blank"
+            href={link}
+            className="btn btn-warning btn-outline rounded-full"
+          >
+            Visite website
+          </a>
         </div>
       </div>
     </div>

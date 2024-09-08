@@ -4,3 +4,4 @@ export { default as Projets } from "./Projets";
 export { default as Contact } from "./Contact";
 export { default as CustomInput } from "./CustomInput";
 export { default as TooggleDarkMode } from "./ToggleDarkMode";
+export { default as ProjectPictureModal } from "./ProjectPictureModal";

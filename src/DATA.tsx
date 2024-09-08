@@ -42,6 +42,7 @@ export const projectData = [
     description:
       "Gear up for your next outdoor adventure with our top-quality camping equipment! We offer a wide selection of durable tents, cozy sleeping bags, portable stoves, and all the essentials to make your camping experience unforgettable. From backpacks and cookware to lanterns and survival tools, our store is your one-stop-shop for everything outdoors. Whether you're a seasoned adventurer or new to camping, our reliable.",
     image: project1,
+    link: "https://faroukq1.github.io/comfy-store/",
   },
   {
     id: 1,
@@ -49,5 +50,6 @@ export const projectData = [
     description:
       "Discover your dream property today! Our platform connects buyers and sellers with a variety of homes, apartments, and commercial properties to suit any need. Browse detailed listings featuring high-quality photos and virtual tours, making it easy to find your perfect match. Sellers can list their properties to reach a large audience, while buyers receive personalized support to navigate the process.",
     image: project2,
+    link: "https://66db3432d116e506991ff3ca--justhome.netlify.app/",
   },
 ];
