@@ -24,7 +24,7 @@ const ProjectPictureModal = ({ images, hideModal, setHideModal }: any) => {
           onClick={handleHideModal}
           className="absolute top-6 right-0 z-[100] w-full flex justify-end"
         >
-          <IoMdCloseCircle className="text-5xl pointer-events-none mr-10 text-red-500" />
+          <IoMdCloseCircle className="text-5xl pointer-events-none mr-10 mt-5 text-black" />
         </button>
         <div className="carousel carousel-center bg-neutral rounded-box w-full h-full space-x-4 p-4">
           {images.map((item: any) => {
@@ -32,7 +32,7 @@ const ProjectPictureModal = ({ images, hideModal, setHideModal }: any) => {
 
             return (
               <div key={item.sys.id} className="w-full h-full carousel-item">
-                <img src={image} className="rounded-box object-cover" />
+                <img src={image} className="w-full rounded-box object-cover" />
               </div>
             );
           })}
