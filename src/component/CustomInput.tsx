@@ -4,7 +4,7 @@ type customInputType = {
 };
 const CustomInput = ({ title, placeholder }: customInputType) => {
   return (
-    <label className="form-control max-w-xs w-full">
+    <label className="form-control w-full max-w-xs">
       <div className="label">
         <span className="label-text">{title}</span>
       </div>
