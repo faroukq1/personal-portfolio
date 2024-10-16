@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "./component/Theme-provider";
+import Navbar from "./component/Navbar";
+import Container from "./component/Container";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,7 +37,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="border-b pb-2">
+            <Navbar />
+          </div>
+          <Container>{children}</Container>
         </ThemeProvider>
       </body>
     </html>
