@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "./component/Theme-provider";
 import Navbar from "./component/Navbar";
 import Container from "./component/Container";
+import Footer from "./component/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -41,6 +42,9 @@ export default function RootLayout({
             <Navbar />
           </div>
           <Container>{children}</Container>
+          <div className="border-t">
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
