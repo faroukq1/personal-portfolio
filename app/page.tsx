@@ -6,6 +6,7 @@ import Hero from "./component/Hero";
 import Technologies from "./component/Technologies";
 import Expertise from "./component/Expertise";
 import Projects from "./component/Projects";
+import ContactUs from "./component/ContactUs";
 
 const page = () => {
   return (
@@ -14,6 +15,7 @@ const page = () => {
       <Technologies />
       <Expertise />
       <Projects />
+      <ContactUs />
     </>
   );
 };
